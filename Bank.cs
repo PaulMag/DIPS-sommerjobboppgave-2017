@@ -11,7 +11,7 @@ public class Bank
         accounts = new List<Account>();
     }
 
-    public Account CreateAccount(Person customer, double initialDeposit)
+    public Account CreateAccount(Person customer, Money initialDeposit)
     {
         if (initialDeposit <= customer.balance) {
             Account newAccount = new Account(
@@ -38,7 +38,7 @@ public class Bank
         return customerAccounts.ToArray();
     }
 
-    public void Deposit(Account to, double amount)
+    public void Deposit(Account to, Money amount)
     {
         if (amount <= to.customer.balance) {
             to.customer.balance -= amount;
@@ -46,7 +46,7 @@ public class Bank
         }
     }
 
-    public void Withdraw(Account from, double amount)
+    public void Withdraw(Account from, Money amount)
     {
        if (amount <= from.balance) {
             from.balance -= amount;
@@ -54,7 +54,7 @@ public class Bank
         }
     }
 
-    public void Transfer(Account from, Account to, double amount)
+    public void Transfer(Account from, Account to, Money amount)
     {
        if (amount <= from.balance) {
             from.balance -= amount;

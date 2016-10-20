@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class Person
 {
     public string name;
-    public double balance;
+    public Money balance;
 
-    public Person(string name, double initialBalance)
+    public Person(string name, Money initialBalance)
     {
         this.name = name;
         this.balance = initialBalance;
