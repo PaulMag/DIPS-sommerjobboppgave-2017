@@ -98,6 +98,8 @@ public class Testing
             // account counter in the Person class.
         }
 
+        System.Console.WriteLine("\nCross-bank transfer:");
+
         bank.Transfer(a2, a6, 10);
             // Abraham transfers $ 0.10 from account 1 in the first bank to
             // account 2 in the second bank.
