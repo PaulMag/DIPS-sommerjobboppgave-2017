@@ -8,7 +8,7 @@ public class Bank
 
     public Bank()
     {
-        accounts = new List<Account>();
+        accounts = new List<Account>();  // List of every account in this Bank.
     }
 
     public Account CreateAccount(Person customer, Money initialDeposit)
@@ -17,6 +17,8 @@ public class Bank
             Account newAccount = new Account(
                 customer,
                 GetAccountsForCustomer(customer).Length + 1
+                // Make the serial number equal the number of accounts this
+                // customer now has.
             );
             Deposit(newAccount, initialDeposit);
             accounts.Add(newAccount);
@@ -24,6 +26,7 @@ public class Bank
         }
         else {
             return null;
+            // No account is created if customer did not have the initiaDeposit.
         }
     }
 
@@ -32,6 +35,8 @@ public class Bank
         List<Account> customerAccounts = new List<Account>();
         foreach (Account account in accounts) {
             if (account.customer == customer) {
+                // Add every account from this bank that matches the customer
+                // to the list.
                 customerAccounts.Add(account);
             }
         }

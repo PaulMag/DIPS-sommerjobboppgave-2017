@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Account
 {
-    public Person customer;
+    public Person customer;  // Owner of account.
     public Money balance;
     public int serialno;  // Is only unique for the same customer.
     public string name; // customer.name + serialno
@@ -17,10 +17,10 @@ public class Account
         name = customer.name + serialno;
     }
 
-    public void print()  // For testing.
+    public void print()  // Print info about this Account.
     {
-        System.Console.WriteLine(name);
-        System.Console.WriteLine(balance);
         System.Console.WriteLine();
+        System.Console.WriteLine("account: " + name);
+        System.Console.WriteLine("balance: " + balance);
     }
 }

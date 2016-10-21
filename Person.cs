@@ -13,10 +13,10 @@ public class Person
         this.balance = initialBalance;
     }
 
-    public void print()  // For testing.
+    public void print()  // Print info about this Person.
     {
-        System.Console.WriteLine(name);
-        System.Console.WriteLine(balance);
         System.Console.WriteLine();
+        System.Console.WriteLine("person: " + name);
+        System.Console.WriteLine("cash: " + balance);
     }
 }
